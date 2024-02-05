@@ -1,4 +1,3 @@
-from vgpk_parser.coordinate import Coordinate
-from vgpk_parser.smart_parser import parse_section
+from vgpk_parser.schedule import parse_schedule
 
-print(parse_section(Coordinate(16, 3)))
+print(parse_schedule())

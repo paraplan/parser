@@ -9,6 +9,6 @@ def parse_cabinets(cabinets_coordinate: Coordinate, header_distance: int) -> lis
     cabinets: list[str] = []
     for i in range(parse_cabinets_count(cabinets_coordinate, header_distance)):
         cabinet = cabinets_coordinate.copy(column_offset=i).get_cell_value()
-        if cabinet not in cabinets and cabinet != "":
+        if cabinet not in cabinets and cabinet.strip() != "":
             cabinets.append(cabinet)
     return cabinets

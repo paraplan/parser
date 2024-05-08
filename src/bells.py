@@ -1,16 +1,15 @@
 from datetime import time
-
 from pydantic import BaseModel
 
-from vgpk_parser import BaseItem
+from src.base import BaseItem
 
 
-class BellHour(BaseModel):
+class BellsHours(BaseModel):
     start: time
     end: time
 
 
 class Bells(BaseModel):
-    id: BaseItem
     name: str
-    hours: list[BellHour]
+    id: BaseItem
+    hours: list[BellsHours]

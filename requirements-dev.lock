@@ -10,12 +10,34 @@
 -e file:.
 annotated-types==0.6.0
     # via pydantic
+cfgv==3.4.0
+    # via pre-commit
+distlib==0.3.8
+    # via virtualenv
+filelock==3.14.0
+    # via virtualenv
+identify==2.5.36
+    # via pre-commit
+nodeenv==1.8.0
+    # via pre-commit
+    # via pyright
 orjson==3.10.3
     # via parser
+platformdirs==4.2.1
+    # via virtualenv
+pre-commit==3.7.0
 pydantic==2.7.1
     # via parser
 pydantic-core==2.18.2
     # via pydantic
+pyright==1.1.362
+pyyaml==6.0.1
+    # via pre-commit
+ruff==0.4.3
+setuptools==69.5.1
+    # via nodeenv
 typing-extensions==4.11.0
     # via pydantic
     # via pydantic-core
+virtualenv==20.26.1
+    # via pre-commit

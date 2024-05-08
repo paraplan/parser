@@ -3,7 +3,7 @@
 ## Develop
 
 1. Install dependencies:
-    - with [rye](https://rye-up.com/) (modern Python package manager) 
+    - with [rye](https://rye-up.com/) (modern Python package manager)
 
     ```sh
     rye sync

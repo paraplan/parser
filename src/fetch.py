@@ -13,5 +13,5 @@ async def _make_request(url: str, params: dict[str, Any]) -> bytes:
             return await resp.read()
 
 
-async def get_schedule(date: date):
+async def get_raw_schedule(date: date) -> bytes:
     return await _make_request(API_URL, {"actdate": "now", "date": str(date), "apikey": API_KEY})

@@ -2,8 +2,8 @@ from datetime import date
 
 from pydantic import BaseModel
 
-from src.area import Area
-from src.bells import Bells
+from src.models.area import Area
+from src.models.bells import Bells
 
 
 class StudyDay(BaseModel):

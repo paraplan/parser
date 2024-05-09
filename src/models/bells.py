@@ -2,7 +2,7 @@ from datetime import time
 
 from pydantic import BaseModel
 
-from src.base import BaseItem
+from src.models.base import BaseItem
 
 
 class BellsHours(BaseModel):

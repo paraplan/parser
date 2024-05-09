@@ -1,7 +1,7 @@
 from pydantic import BaseModel, Field
 
-from src.base import BaseItem
-from src.hours import Hour
+from src.models.base import BaseItem
+from src.models.hours import Hour
 
 
 class Group(BaseModel):

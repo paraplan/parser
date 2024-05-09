@@ -1,5 +1,6 @@
 if __name__ == "__main__":
     import orjson
+
     from src.study_day import StudyDay
 
     with open("schedule.json") as file:

@@ -11,7 +11,7 @@ class Group(BaseModel):
     The Hours field should be a list or dict in random order (I dont know why).
     """
 
-    info: BaseItem = Field(alias="group")
+    info: BaseItem = Field(validation_alias="group")
     extramural: bool
     course: int
     number: int

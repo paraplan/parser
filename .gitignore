@@ -13,5 +13,7 @@ wheels/
 .vscode
 .idea
 
+.env
+
 # Json for develop / debug
 schedule.json

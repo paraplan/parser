@@ -1,19 +1,27 @@
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, Field, field_validator
 
 from src.models.base import BaseItem
 from src.models.hours import Hour
 
+LessonType = dict[int, Hour]
+HoursType = dict[int, LessonType]
+
 
 class Group(BaseModel):
-    """
-    Class for groups
-
-    The Hours field should be a list or dict in random order (I dont know why).
-    """
+    @field_validator("hours", mode="before")
+    def validate_hours(cls, hours: HoursType | list[LessonType]) -> HoursType:
+        """
+        Converts the list to the dict.
+        Because hours is a list when the pairs start at zero
+        and a dict when the pairs start at one (🤡).
+        """
+        if isinstance(hours, list):
+            return {index: hour for index, hour in enumerate(hours)}
+        return hours
 
     info: BaseItem = Field(validation_alias="group")
     extramural: bool
     course: int
     number: int
     prefix: str
-    hours: dict[int, dict[int, Hour]] | list[dict[int, Hour]]
+    hours: HoursType
